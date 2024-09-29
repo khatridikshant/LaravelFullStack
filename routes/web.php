@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::post(uri: '/posts',action: [PostController::class, 'store']);
-Route::post(uri: '/post/{id}',action: [PostController::class,'update']);
+Route::put(uri: '/post/{id}',action: [PostController::class,'update']);
+Route::delete('/post/{id}',[PostController::class,'destroy']);
 
 
