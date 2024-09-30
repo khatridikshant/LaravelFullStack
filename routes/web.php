@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('posts.index');
 });
 
 
@@ -15,6 +15,6 @@ Route::get('/', function () {
 // Route::put(uri: '/posts/{id}',action: [PostController::class,'update']);
 // Route::get('posts/{id}/edit',[PostController::class,'edit']);
 // Route::delete('/post/{id}',[PostController::class,'destroy']);
-Route::resource('/posts/',PostController::class);
+Route::resource('/posts',PostController::class);
 
 
