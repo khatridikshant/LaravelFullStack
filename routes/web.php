@@ -8,8 +8,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post(uri: '/posts',action: [PostController::class, 'store']);
-Route::put(uri: '/post/{id}',action: [PostController::class,'update']);
-Route::delete('/post/{id}',[PostController::class,'destroy']);
+
+// Route::get('/posts/{id}', [PostController::class,'show']);
+// Route::get('/posts', [PostController::class,'index']);
+// Route::post(uri: '/posts',action: [PostController::class, 'store']);
+// Route::put(uri: '/posts/{id}',action: [PostController::class,'update']);
+// Route::get('posts/{id}/edit',[PostController::class,'edit']);
+// Route::delete('/post/{id}',[PostController::class,'destroy']);
+Route::resource('/posts/',PostController::class);
 
 
