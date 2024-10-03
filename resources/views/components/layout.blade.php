@@ -9,22 +9,11 @@ CTYPE html>
     <link rel="stylesheet" href="../css/app.css">
     @vite('resources/css/app.css')
 </head>
+
+
 <body>
-    <nav>
-        <div class="flex justify-between items-center container mx-auto bg-blue-600 text-white text-lg">
-
-
-
-            <a>Home</a>
-            <a>About</a>
-            <a>Services</a>
-            <a>Posts</a>
-            <a>Contact us</a>
-
-
-
-        </div>
-    </nav>
+    <x-navbar />
     {{ $slot }}
+
 </body>
 </html>
