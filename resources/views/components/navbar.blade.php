@@ -7,13 +7,10 @@
           <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
           <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
 
-            <option>My Account</option>
+            <option>Home</option>
 
-            <option>Company</option>
+            <option></option>
 
-            <option>Team Members</option>
-
-            <option>Billing</option>
 
         </select>
         </div>
@@ -22,18 +19,12 @@
 
             <a href="#" class="text-gray-500 hover:bg-gray-100 text-gray-700 px-3 py-2 font-medium text-sm rounded-md"
               x-state:on="Current" x-state:off="Default"
-              x-state-description="Current: &quot;bg-gray-100 text-gray-700&quot;, Default: &quot;text-gray-500 hover:text-gray-700&quot;">My
-              Account</a>
+              x-state-description="Current: &quot;bg-gray-100 text-gray-700&quot;, Default: &quot;text-gray-500 hover:text-gray-700&quot;">Home</a>
 
             <a href="#" class="text-gray-500 hover:bg-gray-100 text-gray-700 px-3 py-2 font-medium text-sm rounded-md"
-              x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Company</a>
+              x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Posts</a>
 
-            <a href="#" class="bg-gray-500 text-gray-700 px-3 py-2 font-medium text-sm rounded-md" aria-current="page"
-              x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Team
-              Members</a>
 
-            <a href="#" class="text-gray-500 hover:bg-gray-100 text-gray-700 px-3 py-2 font-medium text-sm rounded-md"
-              x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Billing</a>
 
           </nav>
         </div>
