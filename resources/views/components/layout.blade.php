@@ -15,7 +15,7 @@ CTYPE html>
     <x-navbar />
 
 
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-4xl mx-auto text-center">
     {{ $slot }} </div>
 
 </body>

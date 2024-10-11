@@ -1,6 +1,8 @@
 <x-layout>
-<div class="max-w-2xl">
-<form class="bg-gray-400 p-2 rounded-sm">
+
+<div class="max-w-4xl">
+<div><h1 class="p-2 text-zinc-950 text-3xl">Post Create</h1></div>
+<form class="bg-gray-400 p-5 rounded-sm">
   <div class="mb-5">
     <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
     <input type="text" id="title" class="bg-gray-50 border
