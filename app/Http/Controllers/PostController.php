@@ -35,6 +35,9 @@ class PostController extends Controller
             "content" => $request->postcontent,
         ]
         );
+
+
+        return to_route('posts.index');
     }
 
     /**
