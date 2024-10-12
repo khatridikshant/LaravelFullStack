@@ -30,6 +30,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+        $datavalidation = $request->validate([
+            "title" => "required|max:255",
+            "content" => "required",
+        ]);
         Post::create([
             "title" => $request->title,
             "content" => $request->postcontent,
