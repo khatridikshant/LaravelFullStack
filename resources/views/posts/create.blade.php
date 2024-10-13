@@ -3,6 +3,12 @@
 <div class="max-w-4xl">
 <div><h1 class="p-2 text-zinc-950 text-3xl">Post Create</h1></div>
 
+@if($errors->any())
+  @foreach($errors->all() as $key)
+  <span class="text-red-400">{{$key}}</span>
+    
+  @endforeach  
+@endif
 
 <form class="bg-gray-400 p-5 rounded-sm" method="post" action="/posts">
 

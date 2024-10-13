@@ -33,7 +33,7 @@ class PostController extends Controller
 
         $datavalidation = $request->validate([
             "title" => "required|max:255",
-            "content" => "required",
+            "content" => "required|min:10",
         ]);
         Post::create([
             "title" => $request->title,
