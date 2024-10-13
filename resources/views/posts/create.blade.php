@@ -3,12 +3,6 @@
 <div class="max-w-4xl">
 <div><h1 class="p-2 text-zinc-950 text-3xl">Post Create</h1></div>
 
-@if($errors->any())
-  @foreach($errors->all() as $key)
-  <span class="text-red-400">{{$key}}</span>
-    
-  @endforeach  
-@endif
 
 <form class="bg-gray-400 p-5 rounded-sm" method="post" action="/posts">
 
@@ -21,10 +15,16 @@
       focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600
        dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         placeholder="Title" required />
+        @error('title')
+          <span class="text-red-500">{{$message}}</span>
+        @enderror
   </div>
     <div class="mb-5">
       <label for="postcontent" name="postcontent" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Message</label>
       <input type="text" name="postcontent" id="postcontent" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  @error('postcontent')
+    <span class="text-red-500">{{$message}}</span>
+  @enderror
   </div>
   <button type="submit"
    class="text-white bg-blue-700
