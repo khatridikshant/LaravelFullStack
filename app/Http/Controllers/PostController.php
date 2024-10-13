@@ -36,11 +36,7 @@ class PostController extends Controller
             "title" => "required|max:255|min:5",
             "content" => "required|min:10",
         ]);
-        Post::create([
-            "title" => $request->title,
-            "content" => $request->postcontent,
-        ]
-        );
+        Post::create($datavalidation);
 
 
         return to_route('posts.index');
