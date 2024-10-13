@@ -7,4 +7,10 @@
      dark:focus:ring-blue-800"
      >Create</button></form>
      </div>
+     <div>
+     @foreach($posts as $key)
+     <li>{{$key->title}}</li>
+        
+     @endforeach
+     </div>
 </x-layout>
