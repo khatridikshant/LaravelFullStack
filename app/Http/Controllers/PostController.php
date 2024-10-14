@@ -63,7 +63,15 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        
+        $validated = $request->validate([
+            'title' => 'required|max:255|min:5',
+            'content' => 'required|min:10'
+        ]);
+
+
+        $post->update($validated);
+        return view('posts.show',compact('post'));
     }
 
     /**
