@@ -79,6 +79,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        $posts = Post::all();
+        return view('posts.index',compact('posts'));
     }
 }
