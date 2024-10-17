@@ -13,6 +13,20 @@ class LoginUser extends Controller
     }
 
 
+
+
+    public function store(Request $request){
+        $request->validate(['email'=> ['required','email'], 'password' => ['required']]);
+        if (Auth::guard('web')->attempt(['email' =>$request->email, 'password' => $request->password])){
+            return redirect()->intended(route('posts.index'));
+        } else{
+            return back()->withErrors([
+                'email' => 'The provided credentials donot match the records',
+            ]);
+        }
+    }
+
+
     public function logout(Request $request){
         
         Auth::guard('web')->logout();
