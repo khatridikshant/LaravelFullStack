@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Http;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -23,6 +24,10 @@ class PostController extends Controller
      */
     public function create()
     {
+
+       if (!Auth::check()){
+        abort(403);
+       }
         return view("posts.create");
     }
 
