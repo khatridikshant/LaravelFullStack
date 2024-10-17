@@ -11,6 +11,8 @@ Route::get('/', function () {
 });
 
 
+
+
 // Route::get('/posts/{id}', [PostController::class,'show']);
 // Route::get('/posts', [PostController::class,'index']);
 // Route::post(uri: '/posts',action: [PostController::class, 'store']);
@@ -22,5 +24,7 @@ Route::get('/register',[RegisterUser::class, 'register'])->name('register');
 Route::post('/register',[RegisterUser::class,'store'])->name('register.store');
 Route::get('/login',[LoginUser::class,'login'])->name('login');
 Route::post('/login',[LoginUser::class,'store'])->name('login.store');
+Route::post('/logout',[LoginUser::class,'logout'])->name('login.logout');
+
 
 

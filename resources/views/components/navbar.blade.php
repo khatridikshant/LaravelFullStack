@@ -27,8 +27,11 @@
               x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Posts</a>
 
             @auth
-           <a href="/logout" class="text-gray-500 hover:bg-gray-100 text-gray-700 px-3 py-2 font-medium text-sm rounded-md"
-              x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Logout</a>          
+            <form method="POST" action="{{route('login.logout')}}">
+            @csrf
+           <button type="submit" class="text-gray-500 hover:bg-gray-100 text-gray-700 px-3 py-2 font-medium text-sm rounded-md"
+              x-state-description="undefined: &quot;bg-gray-100 text-gray-700&quot;, undefined: &quot;text-gray-500 hover:text-gray-700&quot;">Logout</button>          
+            </form>
             @endauth
 
             @guest
