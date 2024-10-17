@@ -1,12 +1,16 @@
 <x-layout>
     <h1>All Posts Display</h1>
     <div class="p-2">
+    @auth
         <form action="{{ route('posts.create') }}" method="get">
             @csrf
             <button type="submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none
      dark:focus:ring-blue-800">Create</button>
         </form>
+    @endauth
+
+    
     </div>
     <div>
     <div class="grid grid-cols-3 gap-5">
