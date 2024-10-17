@@ -41,6 +41,9 @@ class PostController extends Controller
             "title" => "required|max:255|min:5",
             "content" => "required|min:10",
         ]);
+
+        $datavalidation['user_id'] = Auth::id();
+
         Post::create($datavalidation);
 
 
